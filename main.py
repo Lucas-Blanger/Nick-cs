@@ -35,9 +35,9 @@ async def jogos(ctx):
             mensagem = "**Jogos de CS:GO em andamento:**\n\n"
             
             for jogo in jogos[:10]:  
-                nome = jogo['nome']
-                equipe1 = jogo['opponents'][0]['opponent']['nome'] if jogo['opponents'] and len(jogo['opponents']) > 0 else "Equipe 1 não definida"
-                equipe2 = jogo['opponents'][1]['opponent']['nome'] if jogo['opponents'] and len(jogo['opponents']) > 1 else "Equipe 2 não definida"
+                nome = jogo['name']
+                equipe1 = jogo['opponents'][0]['opponent']['name'] if jogo['opponents'] and len(jogo['opponents']) > 0 else "Equipe 1 não definida"
+                equipe2 = jogo['opponents'][1]['opponent']['name'] if jogo['opponents'] and len(jogo['opponents']) > 1 else "Equipe 2 não definida"
                 horario = jogo['scheduled_at']
                 
                 mensagem += f"**{nome}**\n🆚 {equipe1} vs {equipe2}\n⏰ Horário: {horario}\n\n"
